@@ -36,28 +36,27 @@ public class Menu {
 
                 switch (op) {
                     case 1:
-                        //resultado = num1 + num2;
-                        resultado = calculadora.calcular(num1, num2);
-                        System.out.println("Resultado: " + resultado);
+                        resultado = calculadora.soma(num1, num2);
+                        System.out.printf("Resultado: %.2f%n", resultado);
                         break;
                     case 2:
-                        resultado = num1 - num2;
-                        System.out.println("Resultado: " + resultado);
+                        resultado = calculadora.subtracao(num1, num2);
+                        System.out.printf("Resultado: %.2f%n", resultado);
                         break;
                     case 3:
-                        resultado = num1 * num2;
-                        System.out.println("Resultado: " + resultado);
+                        resultado = calculadora.multiplicacao(num1, num2);
+                        System.out.printf("Resultado: %.2f%n", resultado);
                         break;
                     case 4:
                         if (num2 != 0) {
-                            resultado = num1 / num2;
-                            System.out.println("Resultado: " + resultado);
+                            resultado = calculadora.divisao(num1, num2);
+                            System.out.printf("Resultado: %.2f%n", resultado);
                         } else {
                             System.out.println("Erro: Divisão por zero!");
                         }
                         break;
                 }
-                System.out.println(); // Linha em branco para separar as operações
+                System.out.println();
             } else if (op != 0) {
                 System.out.println("Opção inválida! Tente novamente.\n");
             }
